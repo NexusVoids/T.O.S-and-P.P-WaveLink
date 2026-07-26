@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaveLink | Connect Roblox & Discord</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0b1120;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:#2563eb;
+    filter:blur(180px);
+    opacity:.25;
+    left:-200px;
+    top:-200px;
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:700px;
+    height:700px;
+    background:#7c3aed;
+    filter:blur(180px);
+    opacity:.2;
+    right:-250px;
+    bottom:-250px;
+    z-index:-2;
+}
+
+nav{
+    width:100%;
+    padding:20px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    backdrop-filter:blur(20px);
+    background:rgba(15,23,42,.55);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:999;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#4f9dff;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#4f9dff;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    flex-direction:column;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:70px;
+    margin-bottom:15px;
+    background:linear-gradient(90deg,#60a5fa,#818cf8,#38bdf8);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    font-size:22px;
+    max-width:800px;
+    color:#d1d5db;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 38px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.primary{
+    background:#2563eb;
+    color:white;
+}
+
+.primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 30px #2563eb;
+}
+
+.secondary{
+    border:2px solid #2563eb;
+    color:white;
+}
+
+.secondary:hover{
+    background:#2563eb;
+}
+
+section{
+    padding:90px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    border-color:#2563eb;
+    box-shadow:0 0 35px rgba(37,99,235,.35);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#60a5fa;
+}
+
+.card p{
+    color:#d1d5db;
+}
+
+footer{
+    text-align:center;
+    padding:50px 20px;
+    background:#070d18;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer a{
+    color:#60a5fa;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav{
+padding:15px 20px;
+}
+
+nav ul{
+gap:15px;
+font-size:14px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">🌊 WaveLink</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="privacy.html">Privacy</a></li>
+<li><a href="terms.html">Terms</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>WaveLink</h1>
+
+<p>
+Securely connect Roblox and Discord with powerful moderation,
+verification, and session hosting tools.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn primary">Get Started</a>
+
+<a href="#features" class="btn secondary">Learn More</a>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<h2 class="title">Features</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🛡️ Moderation</h3>
+<p>
+Manage Roblox communities with advanced moderation commands and logging.
+</p>
+</div>
+
+<div class="card">
+<h3>🎮 Session Hosting</h3>
+<p>
+Host and manage Roblox sessions with automated tools and Discord integration.
+</p>
+</div>
+
+<div class="card">
+<h3>🔗 Roblox OAuth</h3>
+<p>
+Secure OAuth account linking between Roblox and Discord for verification and account management.
+</p>
+</div>
+
+<div class="card">
+<h3>💬 Discord Integration</h3>
+<p>
+Sync Roblox users, manage roles automatically, and keep your community connected.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">About WaveLink</h2>
+
+<div class="card">
+
+<p>
+WaveLink is a platform designed to connect Roblox experiences with Discord using secure OAuth authentication. It provides moderation tools, account verification, session management, and community automation for Roblox groups and servers.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>WaveLink</h3>
+
+<p>Connecting Roblox, Discord, and your community.</p>
+
+<br>
+
+<a href="privacy.html">Privacy Policy</a> |
+<a href="terms.html">Terms of Service</a>
+
+<br><br>
+
+<p>© 2026 WaveLink. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
